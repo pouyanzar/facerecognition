@@ -18,8 +18,6 @@ const APP_ID = "my-first-application";
 // Change these to whatever model and image URL you want to use
 const MODEL_ID = "face-detection";
 const MODEL_VERSION_ID = "6dc7e46bc9124c5c8824be4822abe105";
-// const IMAGE_URL = "https://samples.clarifai.com/metro-north.jpg";
-// 9d3b9a7c3341482abe395afa3eaeddd5
 
 function App() {
   const [state, setState] = useState("");
@@ -71,8 +69,9 @@ function App() {
         "/outputs",
       requestOptions
     )
-      .then((response) => {
-        if (response) {
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
           fetch("http://localhost:3000/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
@@ -80,11 +79,12 @@ function App() {
               id: user.id,
             }),
           })
-            .then((response) => response.json())
-            .then((count) => setUser(Object.assign(user, { entries: count })));
+            .then((res) => res.json())
+            .then((count) => setUser(Object.assign(user, { entries: count })))
+            .catch(console.log);
         }
+        displayFaceBox(calculateFaceLocation(data));
       })
-      .then((result) => displayFaceBox(calculateFaceLocation(result)))
       .catch((error) =>
         console.log(
           "Error: it seems clarifai server doesn't responding!",
@@ -128,6 +128,16 @@ function App() {
   const onRouteChange = (route) => {
     if (route === "signout") {
       setIsSignedIn(false);
+      setState("");
+      setImageUrl("");
+      setBox({});
+      setUser({
+        id: "",
+        name: "",
+        email: "",
+        entries: 0,
+        joined: "",
+      });
     }
     if (route === "home") {
       setIsSignedIn(true);
