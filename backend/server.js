@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 const saltRounds = 10;
-const PORT = process.env || 3000;
+const PORT = process.env.PORT || 3000;
 const db = knex({
   client: "pg",
   connection: {
