@@ -23,9 +23,9 @@ const db = knex({
   },
 });
 
-db.select("*")
-  .from("users")
-  .then((data) => console.log(data));
+// db.select("*")
+//   .from("users")
+//   .then((data) => console.log(data));
 
 app.get("/", (req, res) => {
   res.send("it is working");
