@@ -9,7 +9,7 @@ const Register = ({ onRouteChange, loadUser }) => {
   const onNameChange = (e) => setName(e.target.value);
   const onPasswordChange = (e) => setPassword(e.target.value);
   const onSubmitRegister = () => {
-    fetch("http://localhost:3000/register", {
+    fetch("https://stark-woodland-65536.herokuapp.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
