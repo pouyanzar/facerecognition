@@ -16,10 +16,11 @@ const PORT = process.env.PORT || 3000;
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "pouyan",
-    password: "",
-    database: "smart-brain",
+    host: "db.dqsrvssffqaplmyxsifo.supabase.co",
+    user: "postgres",
+    password: "HOO121p!#^$",
+    database: "postgres",
+    ssl: true,
   },
 });
 
