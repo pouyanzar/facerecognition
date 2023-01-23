@@ -39,7 +39,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         if (data) {
-          fetch("https://stark-woodland-65536.herokuapp.com/image", {
+          fetch("https://facerecognition-server.onrender.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
