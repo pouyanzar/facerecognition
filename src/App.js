@@ -29,7 +29,7 @@ function App() {
   };
   const onSubmit = () => {
     setImageUrl(state);
-    fetch("https://stark-woodland-65536.herokuapp.com/imageurl", {
+    fetch("https://facerecognition-server.onrender.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
