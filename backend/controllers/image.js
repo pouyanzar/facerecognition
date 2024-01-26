@@ -4,7 +4,6 @@ const app = new Clarifai.App({
   apiKey: process.env.API_CLARIFAI,
 });
 const handleApiCall = (req, res) => {
-  console.log(app.apiKey);
   app.models
     .predict("face-detection", req.body.input)
     .then((data) => res.json(data))
