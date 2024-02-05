@@ -27,7 +27,19 @@ To get started with the project, follow these steps:
    cd ../backend
    npm install
    ```
-3. **Start the Application:**
+
+3. **Set Up PostgreSQL Database:**
+
+   Create a PostgreSQL database.
+   Update the server/knexfile.js file with your database configuration.
+   
+4. **Set Up Clarifai API:**
+
+   Obtain API keys from Clarifai by creating an account.
+   Update the server/config.js file with your Clarifai API key.
+
+   
+5. **Start the Application:**
    ```
    cd server
    npm start
@@ -35,7 +47,7 @@ To get started with the project, follow these steps:
    npm start
    ```
 
-4. **Access the Application:**
+6. **Access the Application:**
    Open your browser and navigate to `http://localhost:3000` to use the face recognition application.
 
 ## Project Structure
