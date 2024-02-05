@@ -17,11 +17,11 @@ const PORT = process.env.PORT || 3000;
 const db = knex({
   client: "pg",
   connection: {
-    host: env.HOST,
-    user: env.USER,
-    password: env.PASSWORD,
-    database: env.DATABASE,
-    port: env.PORT,
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
+    port: process.env.PORT,
   },
 });
 
