@@ -31,12 +31,12 @@ To get started with the project, follow these steps:
 3. **Set Up PostgreSQL Database:**
 
    Create a PostgreSQL database.
-   Update the server/knexfile.js file with your database configuration.
+   Update the server.js file with your database configuration.
    
 4. **Set Up Clarifai API:**
 
    Obtain API keys from Clarifai by creating an account.
-   Update the server/config.js file with your Clarifai API key.
+   Update the backend/controllers/image.js file with your Clarifai API key.
 
    
 5. **Start the Application:**
@@ -54,15 +54,13 @@ To get started with the project, follow these steps:
 
 The project structure is organized as follows:
 
-- **client:** Contains the React front-end code.
-- **server:** Contains the Express back-end code and server configuration.
-- **server/db:** Manages database-related functionalities using Knex.
-- **server/controllers:** Handles HTTP request handling and response generation.
-- **server/models:** Defines data models for the application.
-- **server/routes:** Defines API routes and associated logic.
-- **server/migrations:** Contains database migration files for Knex.
+- **frontend:** Contains the React front-end code.
+- **backend:** Contains the Express back-end code and server configuration.
+- **backend/server:** Manages database-related functionalities using Knex.
+- **backend/controllers:** Handles HTTP request handling and response generation.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 Happy coding! 🚀
