@@ -1,5 +1,7 @@
 # Face Recognition Project with React, Express, Knex, PG, and Clarifai API
 
+live demo: https://pouyanzar.github.io/facerecognition/
+
 ## Overview
 
 Welcome to the Face Recognition project! This project utilizes a combination of technologies to implement face recognition functionality. The key components include:
