@@ -16,11 +16,11 @@ const PORT = process.env.PORT || 3000;
 const db = knex({
   client: "pg",
   connection: {
-    host: "db.dqsrvssffqaplmyxsifo.supabase.co",
-    user: "postgres",
-    password: "HOO121p!#^$",
-    database: "postgres",
-    port: 5432,
+    host: env.HOST,
+    user: env.USER,
+    password: env.PASSWORD,
+    database: env.DATABASE,
+    port: env.PORT,
   },
 });
 
